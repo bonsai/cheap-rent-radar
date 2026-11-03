@@ -29,7 +29,7 @@ gh aw status
 
 Commit the generated `*.lock.yml` file together with the source workflow. The source Markdown is not executable by GitHub Actions until compiled.
 
-The workflow uses the Codex engine with hosted web search. Confirm the required Codex/OpenAI authentication and GitHub Actions permissions in repository settings before enabling scheduled runs.
+The workflow uses the Codex engine with hosted web search. Add an `OPENAI_API_KEY` (or `CODEX_API_KEY`) repository Actions secret; a ChatGPT subscription login is not a substitute for an API key. Codex API usage is billed separately. Confirm GitHub Actions is enabled and the workflow can create issues through its safe-output job before enabling scheduled runs.
 
 ## Data integrity and safety
 
