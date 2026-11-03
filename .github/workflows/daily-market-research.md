@@ -23,6 +23,16 @@ network:
   allowed:
     - defaults
     - github
+    - homes.co.jp
+    - suumo.jp
+    - athome.co.jp
+    - chintai.net
+    - oakhouse.jp
+    - borderless-house.com
+    - x-house.co.jp
+    - gg-house.co.jp
+    - sharehouse.in
+    - sharepark.com
   hosted-web:
     allowed:
       - homes.co.jp
@@ -37,9 +47,19 @@ network:
       - sharepark.com
     max-uses: 18
 safe-outputs:
+  allowed-domains:
+    - homes.co.jp
+    - suumo.jp
+    - athome.co.jp
+    - chintai.net
+    - oakhouse.jp
+    - borderless-house.com
+    - x-house.co.jp
+    - gg-house.co.jp
+    - sharehouse.in
+    - sharepark.com
   create-issue:
     title-prefix: "[rent-radar] "
-    labels: [rent-radar, research]
     max: 1
     deduplicate-by-title: true
 ---
