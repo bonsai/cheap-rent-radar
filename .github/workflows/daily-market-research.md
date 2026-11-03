@@ -11,6 +11,7 @@ on:
         required: false
         type: string
 engine: codex
+model: openai/gpt-6.1-sol
 permissions:
   contents: read
   issues: read
@@ -23,6 +24,7 @@ network:
   allowed:
     - defaults
     - github
+    - codex
     - homes.co.jp
     - suumo.jp
     - athome.co.jp
@@ -76,7 +78,7 @@ Research Osaka City rental housing and sharehouses every day. Find genuinely new
 
 The geographic scope is Osaka City's 24 wards only. Compare ordinary rentals and sharehouses, but never collapse their contract or room-type differences.
 
-If the manual dispatch input `focus` is provided, prioritize it while retaining the city-wide scope and the same hard price rule.
+Manual dispatch focus: `${{ inputs.focus || 'none' }}`. If it is not `none`, prioritize that focus while retaining the city-wide scope and the same hard price rule.
 
 ## Research procedure
 
