@@ -47,7 +47,6 @@ network:
       - gg-house.co.jp
       - sharehouse.in
       - sharepark.com
-    max-uses: 18
 safe-outputs:
   allowed-domains:
     - homes.co.jp
