@@ -23,13 +23,14 @@
 ```bash
 gh extension install github/gh-aw
 gh aw init
-gh aw compile
+gh aw compile daily-market-research
 gh aw status
+gh aw run daily-market-research
 ```
 
-Commit the generated `*.lock.yml` file together with the source workflow. The source Markdown is not executable by GitHub Actions until compiled.
+Commit the generated `*.lock.yml` file together with the source workflow. The source Markdown is not executable by GitHub Actions until compiled. Commit the generated `.github/workflows/daily-market-research.lock.yml` to `main`; do not hand-edit the generated lock file.
 
-The workflow uses the Codex engine with hosted web search. Add an `OPENAI_API_KEY` (or `CODEX_API_KEY`) repository Actions secret; a ChatGPT subscription login is not a substitute for an API key. Codex API usage is billed separately. Confirm GitHub Actions is enabled and the workflow can create issues through its safe-output job before enabling scheduled runs.
+The workflow uses the Codex engine with hosted web search. Add an `OPENAI_API_KEY` (or `CODEX_API_KEY`) repository Actions secret; a ChatGPT subscription login is not a substitute for an API key. Codex API usage is billed separately. For example, use `gh secret set OPENAI_API_KEY < /path/to/key.txt` without putting the key in a command argument or chat. Confirm GitHub Actions is enabled and the workflow can create issues through its safe-output job before enabling scheduled runs.
 
 ## Data integrity and safety
 
